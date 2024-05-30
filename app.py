@@ -7,6 +7,11 @@ from flask import Flask, render_template
 app = Flask(__name__, static_folder='static')
 
 
+# Check Current Script for Main or Module
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 # Define SQLite Database
 db = SQL('sqlite:///homunculus.db')
 
@@ -16,8 +21,3 @@ db = SQL('sqlite:///homunculus.db')
 def index():
 
     return render_template('index.html')
-
-
-# Check Current Script for Main or Module
-if __name__ == '__main__':
-    app.run(debug=True)
