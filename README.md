@@ -8,3 +8,4 @@ Homunculus is a project to automate employees' digital responsibilities.
 
 - CS50
 - Flask
+- Jinja2
